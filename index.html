@@ -1,34 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chibudom | Frontend Developer</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <header class="site-header">
-    <nav class="navbar">
-    <a href="#home" class="logo">Chibudom</a>
+      <nav class="navbar">
+        <a href="#home" class="logo">Chibudom</a>
 
-    <ul class="nav-links" id="navLinks">
-        <li><a href="#home" data-nav>Home</a></li>
-        <li><a href="#aboutme" data-nav>About Me</a></li>
-        <li><a href="#whyme" data-nav>Why Me</a></li>
-        <li><a href="#projects" data-nav>Projects</a></li>
-        <li><a href="#contact" data-nav>Contact</a></li>
-    </ul>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" data-nav>Home</a></li>
+          <li><a href="#aboutme" data-nav>About Me</a></li>
+          <li><a href="#whyme" data-nav>Why Me</a></li>
+          <li><a href="#projects" data-nav>Projects</a></li>
+          <li><a href="#contact" data-nav>Contact</a></li>
+        </ul>
 
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">&#9776;</button>
-</nav>
-</header>
-<main>
-    <section id="home" class="hero">
-        <h1></h1>
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          &#9776;
+        </button>
+      </nav>
+    </header>
+    <main>
+      <section id="home" class="hero">
+        <p class="eyebrow">Hello, I'm</p>
+        <h1 class="hero-name">Chibudom</h1>
+        <p class="hero-role">Frontend Developer</p>
+      </section>
+
+      <section id="about" class="section">
+        <p class="section-label">About Me</p>
+        <h2 class="section-title">From words to Interfaces</h2>
+        <div class="about-card">
+          <p></p>
+        </div>
+      </section>
+
+<section id="why-me" class="section">
+    <p class="section-label">Why Me</p>
+    <h2 class="section-title">What I bring to the team</h2>
+    <div class="why-grid">
+        <div class="why-card">
+            <h3>Reason One</h3>
+            <p></p>
+        </div>
+    </div>
     </section>
-</main>
 
-<script src="js/main.js"></script>
-</body>
+    <section id="projects" class="section">
+        <p class="section-label">Projects</p>
+        <h2 class="section-title">Selected work</h2>
+    <article class="project-featured">
+        <h3>Project name</h3>
+<p>Project description goes here.</p>
+    </article>
+    </section>
+
+    <section id="contact" class="section">
+        <p class="section-label">Contact</p>
+        <h2 class="section-title">Let's talk</h2>
+        <p>Contact details goes here</p>
+    </section>
+
+
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
