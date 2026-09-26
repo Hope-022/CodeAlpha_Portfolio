@@ -86,3 +86,144 @@
         cursor: pointer;
 
     }
+
+    /*=============== HERO STYLING ===============*/
+    .hero {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 100px 32px;
+        text-align: center;
+    }
+
+    .eyebrow {
+        color: var(--purple-light);
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+
+.hero-name {
+    font-size: clamp(36px, 6vw, 56px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+}
+
+    .hero-role {
+        font-size: clamp(18px, 2.4vw, 22px);
+        color: var(--muted);
+        margin-top: 10px;
+    }
+
+    /*=============== SECTION HEADS (shared pattern) ===============*/
+    .section {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 90px 32px;
+    }
+
+    .section-label {
+        color: var(--purple);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .section-title {
+        font-size: clamp(24px, 3.6vw, 34px);
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        margin-bottom: 40px;
+    }
+
+    /*=============== ABOUT STYLING ===============*/
+    .about-card{
+background: var(--panel);
+border: 1px solid var(--border);
+border-radius: 20px;
+padding: 32px;
+}
+
+.about-card p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/*=============== Skills===============*/
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.skills-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 24px;
+}
+
+.skills-card h3 {
+    font-size: 15px;
+    color: var(--panel-light);
+    margin-bottom: 8px;
+}
+
+.skills-card p{
+    color: var(--muted);
+    font-size: 13.5px;
+    line-height: 1.6;
+}
+
+/*======= PROJECTS =======*/
+.project-featured {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 32px;
+}
+
+.project-featured h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+
+}
+
+.project-featured p {
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 620px;
+}
+
+/*============== CONTACT ==========*/
+#contact {
+    text-align: center;
+    padding-bottom: 110px;
+}
+
+/*============= TABLET(≤1024px) =========== */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 70px 24px;
+  }
+}
+/* ============ MOBILE (≤720px) ============ */
+@media (max-width: 720px) {
+    .section {
+        padding: 60px 20px;
+    }
+    .nav-links {
+        display: none;
+    }
+    .menu-btn{
+        display: block;
+    }
+
+    .navbar{
+        padding: 16px 20px;
+    }
+}
