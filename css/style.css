@@ -1,208 +1,231 @@
 /*=============== CSS Variables ===============*/
 :root {
-    --bg: #0b0710;
-    --panel: #151022;
-    --border: #2a2140;
-    --purple: #9b7ef9;
-    --text: #f5f3fb;
-    --muted: #a9a2c2;
-    --radius: 14px;
+  --bg: #0b0710;
+  --panel: #151022;
+  --border: #2a2140;
+  --purple: #9b7ef9;
+  --text: #f5f3fb;
+  --muted: #a9a2c2;
+  --radius: 14px;
 }
 
 /*=============== RESET ===============*/
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-
-    html {
-        scroll-behavior: smooth;;
-    }
-
-    body {
-        background: radial-gradient(120% 60% at 50% 0%, #3d2f8c 0%, #1a1330 40%, var(--bg) 80%);
-        color: var(--text);
-        font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-
-    }
-
-    img {
-        max-width: 100%;
-        display: block;
-    }
-    /*=============== NAVBAR STYLING ===============*/
-    .site-header {
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        background: rgba(11, 7, 16, 0.75);
-        backdrop-filter: blur(10px);
-        border-bottom: 1px solid var(--border);
-    }
-
-    .navbar {
-        max-width: 1080px;
-        margin: 0 auto;
-        padding: 20px 32px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .logo {
-        color: var(--text);
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 17px;
-    }
-
-    .nav-links {
-        display: flex;
-        gap: 30px;
-        list-style: none;
-    }
-
-    .nav-links a {
-        color: var(--muted);
-        text-decoration: none;
-        font-size: 14px;
-        font-weight: 500;
-    }
-
-    .nav-links a.active{
-        color: var(--text);
-    }
-
-    .menu-btn {
-        display: none;
-        background: none;
-        border: 1px solid var(--border);
-        color: var(--text);
-        font-size: 18px;
-        width: 38px;
-        height: 38px;
-        border-radius: 8px;
-        cursor: pointer;
-
-    }
-
-    /*=============== HERO STYLING ===============*/
-    .hero {
-        max-width: 1080px;
-        margin: 0 auto;
-        padding: 100px 32px;
-        text-align: center;
-    }
-
-    .eyebrow {
-        color: var(--purple-light);
-        font-size: 14px;
-        font-weight: 600;
-        margin-bottom: 6px;
-    }
-
-.hero-name {
-    font-size: clamp(36px, 6vw, 56px);
-    font-weight: 800;
-    line-height: 1.08;
-    letter-spacing: -0.02em;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-    .hero-role {
-        font-size: clamp(18px, 2.4vw, 22px);
-        color: var(--muted);
-        margin-top: 10px;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    /*=============== SECTION HEADS (shared pattern) ===============*/
-    .section {
-        max-width: 1080px;
-        margin: 0 auto;
-        padding: 90px 32px;
-    }
+body {
+  background: radial-gradient(
+    120% 60% at 50% 0%,
+    #3d2f8c 0%,
+    #1a1330 40%,
+    var(--bg) 80%
+  );
+  color: var(--text);
+  font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
 
-    .section-label {
-        color: var(--purple);
-        font-size: 13px;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-    }
+img {
+  max-width: 100%;
+  display: block;
+}
+/*=============== NAVBAR STYLING ===============*/
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(11, 7, 16, 0.75);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
 
-    .section-title {
-        font-size: clamp(24px, 3.6vw, 34px);
-        font-weight: 800;
-        letter-spacing: -0.02em;
-        margin-bottom: 40px;
-    }
+.navbar {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    /*=============== ABOUT STYLING ===============*/
-    .about-card{
-background: var(--panel);
-border: 1px solid var(--border);
-border-radius: 20px;
-padding: 32px;
+.logo {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-links a.active {
+  color: var(--text);
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 18px;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 12px 20 18px;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+.mobile-menu a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 15px;
+  padding: 12px 0;
+  display: block;
+}
+
+/*=============== HERO STYLING ===============*/
+.hero {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 100px 32px;
+  text-align: center;
+}
+
+.eyebrow {
+  color: var(--purple-light);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.hero-name {
+  font-size: clamp(36px, 6vw, 56px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.hero-role {
+  font-size: clamp(18px, 2.4vw, 22px);
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+/*=============== SECTION HEADS (shared pattern) ===============*/
+.section {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 90px 32px;
+}
+
+.section-label {
+  color: var(--purple);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: clamp(24px, 3.6vw, 34px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 40px;
+}
+
+/*=============== ABOUT STYLING ===============*/
+.about-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 32px;
 }
 
 .about-card p {
-    color: var(--muted);
-    font-size: 15px;
-    line-height: 1.8;
-    font-size: 15px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+  font-size: 15px;
 }
 
 /*=============== Skills===============*/
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
 }
 
 .skills-card {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    padding: 24px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 24px;
 }
 
 .skills-card h3 {
-    font-size: 15px;
-    color: var(--panel-light);
-    margin-bottom: 8px;
+  font-size: 15px;
+  color: var(--panel-light);
+  margin-bottom: 8px;
 }
 
-.skills-card p{
-    color: var(--muted);
-    font-size: 13.5px;
-    line-height: 1.6;
+.skills-card p {
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.6;
 }
 
 /*======= PROJECTS =======*/
 .project-featured {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 32px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 32px;
 }
 
 .project-featured h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-
+  font-size: 22px;
+  margin-bottom: 10px;
 }
 
 .project-featured p {
-    color: var(--muted);
-    line-height: 1.7;
-    max-width: 620px;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 620px;
 }
 
 /*============== CONTACT ==========*/
 #contact {
-    text-align: center;
-    padding-bottom: 110px;
+  text-align: center;
+  padding-bottom: 110px;
 }
 
 /*============= TABLET(≤1024px) =========== */
@@ -213,17 +236,17 @@ padding: 32px;
 }
 /* ============ MOBILE (≤720px) ============ */
 @media (max-width: 720px) {
-    .section {
-        padding: 60px 20px;
-    }
-    .nav-links {
-        display: none;
-    }
-    .menu-btn{
-        display: block;
-    }
+  .section {
+    padding: 60px 20px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+  }
 
-    .navbar{
-        padding: 16px 20px;
-    }
+  .navbar {
+    padding: 16px 20px;
+  }
 }
