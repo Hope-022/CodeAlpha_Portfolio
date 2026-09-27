@@ -258,12 +258,53 @@ img {
   margin-top: 24px;
 }
 
+/* ======== CERTIFICATIONS ==========*/
+
+.cert-status {
+  display: inline-block;
+  background: rgba(155, 126, 249, 0.15);
+  color: var(--purple-light);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
 /*============== CONTACT ==========*/
 #contact {
   text-align: center;
   padding-bottom: 110px;
 }
 
+.contact-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+   background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 11px 18px;
+  border-radius: 10px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 500;
+}
+
+.contact-link:hover {
+  border-color: var(--purple);
+  color: var(--purple-light);
+}
 /*============= TABLET(≤1024px) =========== */
 @media (max-width: 1024px) {
   .hero {
