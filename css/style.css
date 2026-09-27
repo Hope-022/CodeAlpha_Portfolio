@@ -234,6 +234,30 @@ img {
   max-width: 620px;
 }
 
+.project-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.project-links a {
+  color: var(--purple-light);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
+
+.projects-note {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 14px;
+  margin-top: 24px;
+}
+
 /*============== CONTACT ==========*/
 #contact {
   text-align: center;
