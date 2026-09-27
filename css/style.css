@@ -203,6 +203,18 @@ img {
   line-height: 1.6;
 }
 
+.skills-subtitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+.skills-subtitle:first-of-type {
+  margin-top: 0;
+}
+
 /*======= PROJECTS =======*/
 .project-featured {
   background: var(--panel);
@@ -248,5 +260,25 @@ img {
 
   .navbar {
     padding: 16px 20px;
+  }
+}
+
+/* ============ SCROLL REVEAL ============ */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

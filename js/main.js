@@ -33,9 +33,23 @@ menuBtn.addEventListener('click', () => {
 
 const mobileLinks = document.querySelectorAll('[data-nav-mobile]');
 
-mobileLinks,forEach((link) => {
+mobileLinks.forEach((link) => {
     link.addEventListener('click', () => {
         mobileMenu.classList.remove('open');
         menuBtn.setAttribute('aria-expanded', 'false');
     });
 });
+
+// ============ SCROLL REVEAL ============
+const revealElements = document.querySelectorAll('.reveal');
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+revealElements.forEach((el) => revealObserver.observe(el));
