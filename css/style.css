@@ -114,9 +114,31 @@ img {
 /*=============== HERO STYLING ===============*/
 .hero {
   max-width: 1080px;
+  min-height: 82vh;
+  flex-direction: column;
+  justify-content: space-between;
   margin: 0 auto;
-  padding: 100px 32px;
-  text-align: center;
+  padding: 50px 32px 30px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr 1fr;
+  align-items: stretch;
+  gap: 20px;
+}
+.hero-right {
+  text-align: right;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-left,
+.hero-right {
+  padding-top: 100px;
 }
 
 .eyebrow {
@@ -137,6 +159,94 @@ img {
   font-size: clamp(18px, 2.4vw, 22px);
   color: var(--muted);
   margin-top: 10px;
+}
+
+.hero-name,
+.hero-role {
+  font-size: clamp(32px, 4.2vw, 44px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.social-col {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.social-col a {
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+
+.social-col a:hover {
+  color: var(--purple-light);
+  border-color: var(--purple);
+}
+
+.hero-bottom {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+}
+
+.portrait-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-self: start;
+  margin-top: -18px;
+  
+}
+
+
+.portrait-wrap::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(155, 126, 249, 0.55), transparent 70%);
+  filter: blur(30px);
+  z-index: 0;
+}
+
+.portrait {
+  position: relative;
+  z-index: 1;
+  width: 400px;
+  aspect-ratio: 3 / 4;
+}
+
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  filter: contrast(1.08) saturate(1.1) drop-shadow(0 20px 40px rgba(0, 0, 0, 0.45));
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
+.resume-link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.resume-link:hover {
+  color: var(--purple-light);
 }
 
 /*=============== SECTION HEADS (shared pattern) ===============*/
@@ -326,7 +436,20 @@ img {
   .navbar {
     padding: 16px 20px;
   }
+
+  .hero-grid {
+  grid-template-columns: 1fr;
+  text-align: center;
 }
+.hero-right {
+  text-align: center;
+}
+.portrait-wrap {
+  order: -1;
+}
+}
+
+
 
 /* ============ SCROLL REVEAL ============ */
 .reveal {
