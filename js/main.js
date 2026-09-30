@@ -25,10 +25,16 @@ sections.forEach((section) => observer.observe(section));
 // ============ MOBILE MENU TOGGLE ======
 const menuBtn = document.getElementById('menuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
+const closeMenuBtn = document.getElementById('closeMenuBtn')
 
 menuBtn.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.toggle('open');
-    menuBtn.setAttribute('aria-expanded', isOpen);
+    mobileMenu.classList.add('open');
+    menuBtn.setAttribute('aria-expanded', true);
+});
+
+closeMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.remove('open');
+  menuBtn.setAttribute('aria-expanded', 'false');
 });
 
 const mobileLinks = document.querySelectorAll('[data-nav-mobile]');
